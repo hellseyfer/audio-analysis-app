@@ -1,0 +1,39 @@
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+
+        <!--     <div class="form-group">
+        <label for="file">File</label>
+        <input formControlName="file" id="file" type="file" name="file" class="form-control" (change)="onFileChange($event)"
+            accept="audio/wav">
+    </div>
+ -->
+ <div class="wrapper">
+        <mat-form-field appearance="outline">
+            <mat-label>Upload a .wav song</mat-label>
+            <ngx-mat-file-input #removableInput formControlName="file" placeholder="Upload a .wav song"
+                (change)="onFileChange($event)" accept="audio/wav"></ngx-mat-file-input>
+            <mat-icon matSuffix>folder</mat-icon>
+            <!-- clear button -->
+            <button mat-icon-button matSuffix *ngIf="!removableInput.empty" (click)="removableInput.clear($event)" (click)="resetResults()">
+                <mat-icon>clear</mat-icon>
+            </button>
+
+            <!-- validation messages -->
+            <mat-error *ngIf="myForm.get('file').hasError('required')">
+                Please select a file
+            </mat-error>
+            <mat-error *ngIf="myForm.get('file').hasError('maxContentSize')">
+                The total size must not exceed {{myForm.get('file')?.getError('maxContentSize').maxSize | byteFormat}} ({{myForm.get('file')?.getError('maxContentSize').actualSize
+            | byteFormat}}).
+            </mat-error>
+        </mat-form-field>
+
+        <!-- <button type="submit" [disabled]="!myForm.valid">Send</button> -->
+        <button mat-flat-button color="primary" type="submit" [disabled]="!myForm.valid">Send</button>
+    </div>
+    </form>
+
+    <section *ngIf="loading">
+        <app-progress-bar></app-progress-bar>
+    </section>
+
+<!-- {{ myForm.value | json}} -->

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ws_url: 'http://192.168.0.66:5050',
+  //ws_url: 'http://yuanserver2.ddns.net',
 };
 
 /*

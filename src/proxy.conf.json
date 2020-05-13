@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://yuanserver2.ddns.net",
+        "secure": true,
+        "logLevel": "debug"
+    }
+}

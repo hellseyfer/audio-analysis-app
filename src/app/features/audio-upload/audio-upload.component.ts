@@ -13,7 +13,7 @@ import { LoaderService } from 'src/app/shared/services/loader/loader.service';
 })
 export class AudioUploadComponent implements OnInit {
   myForm: FormGroup;
-  readonly maxSize = 104857600; // it's 100 MB (=100 * 2 ** 20).
+  readonly maxSize = 104857600; // it's 100 MB (=100 * 1024 * 1024).
   loading: boolean;
 
   get fileSource(): FormGroup {

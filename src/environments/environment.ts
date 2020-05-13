@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ws_url: 'http://192.168.0.66:5050',
+  ws_url: 'http://192.168.0.66:8082',
   //ws_url: 'http://yuanserver2.ddns.net',
 };
 

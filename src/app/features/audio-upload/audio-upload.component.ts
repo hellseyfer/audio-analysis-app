@@ -47,11 +47,12 @@ export class AudioUploadComponent implements OnInit {
   }
 
   onSubmit() {
+    this.resetResults();
     const formData = new FormData(); // a pair of key value sets
     formData.append('file', this.fileSource.value);
     this.audioUploadService.postAudioFile(formData).then(res => {
       console.log(res);
-      this.resultsService.setResult(res.tonal);
+      this.resultsService.setResult(res);
     });
   }
 

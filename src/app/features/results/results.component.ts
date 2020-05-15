@@ -14,6 +14,9 @@ export class ResultsComponent implements OnInit {
 
   ngOnInit(): void {
     this.$data = this.resultsService.getResults();
+    this.resultsService.getResults().subscribe(res => {
+      console.log(res);
+    })
   }
 
 }

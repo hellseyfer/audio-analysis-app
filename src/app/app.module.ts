@@ -20,6 +20,7 @@ import { LoaderService } from './shared/services/loader/loader.service';
 import { LoaderInterceptor } from './shared/services/interceptors/loader-interceptor.service';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment.prod';
+import { ResultsBadgetComponent } from './features/results/components/results-badget/results-badget.component';
 
 export const config: FileInputConfig = {
   sizeUnit: 'Octet'
@@ -39,7 +40,8 @@ const material = [
     AudioUploadComponent,
     TitleComponent,
     ResultsComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ResultsBadgetComponent
   ],
   imports: [
     BrowserModule,

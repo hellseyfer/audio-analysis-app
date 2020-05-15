@@ -1,11 +1,13 @@
-<div class="border" *ngFor="let res of $data | async">
-<!--     <span>
-        {{ res | json }}
-    </span> -->
-    <div *ngIf="res.key_key">
+<div *ngFor="let res of $data | async">
+    <app-results-badget [_res]="res"></app-results-badget>
+<!--     <div class="border" *ngIf="res.tonal.key_key">
         <span> Most likely to be in tone: </span>
-        <span class="bold"> {{ res.key_key }} {{ res.key_scale }} </span>
+        <span class="bold"> {{ res.tonal.key_key }} {{ res.tonal.key_scale }} </span>
         <span> - strength: </span>
-        <span class="bold"> {{ res.key_strength | number:'1.1-3' }}</span>
+        <span class="bold"> {{ res.tonal.key_strength | number:'1.1-3' }}</span>
     </div>
+    <div class="border" *ngIf="res.EBU128_integrated_loudness">
+        <span> Loudness (EBU128): </span>
+        <span class="bold"> {{ res.EBU128_integrated_loudness | number:'1.1-3'}} </span>
+    </div> -->
 </div>

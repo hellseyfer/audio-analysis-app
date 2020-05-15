@@ -1,0 +1,42 @@
+<div *ngIf="_res">
+    <!-- Filename -->
+    <div class="border">
+        <span> {{ _res.Filename }}</span>
+    </div>
+    <!-- Sample rate-->
+    <div class="border">
+        <span> Sample rate: </span>
+        <span class="bold"> {{ _res.Sample_rate}} </span>
+        <span> BPM: </span>
+        <span class="bold"> {{ _res.BPM | number:'1.1-3'}} </span>
+    </div>
+    <!-- Tone -->
+    <div class="border">
+        <span> Most likely to be in tone: </span>
+        <span class="bold"> {{ _res.tonal.key_key }} {{ _res.tonal.key_scale }} </span>
+        <span> - strength:  </span>
+        <span class="bold"> {{ _res.tonal.key_strength | number:'1.1-3' }}</span>
+    </div>
+    <!-- Chords-->
+    <div class="border">
+        <span> Chords Key: </span>
+        <span class="bold"> {{ _res.Chords.key}} </span>
+        <span class="bold"> {{ _res.Chords.scale }} </span>
+        <span> - strength: </span>
+        <span class="bold"> {{ _res.Chords.strength | number:'1.1-3'}} </span>
+    </div>
+    <!-- Loudness -->
+    <div class="border">
+        <span> Loudness:    </span>
+        <span class="bold"> {{ _res.Loudness.level | number:'1.1-3'}} </span>
+        <span> Range: </span>
+        <span class="bold"> {{ _res.Loudness.range | number:'1.1-3'}} </span>
+    </div>
+    <!-- Dynamic range
+    <div class="border">
+        <span>Dynamic range: </span>
+        <span class="bold">{{ _res.Dynamic_complexity | number:'1.1-3'}} </span>
+    </div>
+    -->
+
+</div>

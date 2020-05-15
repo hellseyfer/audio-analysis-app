@@ -1,0 +1,19 @@
+.border {
+    padding-top: 1rem;
+    margin-top: 0.3rem;
+    display: flex;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: flex-start;
+    border: 1px solid #c2185b;
+    border-radius: 12px 12px 12px 12px;
+}
+
+span {
+    text-indent: 0.3em;
+}
+
+.bold {
+    font-weight: 500;
+}
